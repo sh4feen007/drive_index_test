@@ -651,8 +651,7 @@ function copyToClipboard(str) {
 
 // Document display video |mp4|webm|avi|
 function file_video(path) {
-	const pathenco = encodeURI(path);
-	const url = window.location.origin + pathenco;
+	const url = window.location.origin + path;
 	const content = `
   <div class="container"><br>
   <div class="card">
