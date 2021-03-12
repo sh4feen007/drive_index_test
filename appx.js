@@ -592,7 +592,8 @@ function file_others(path) {
 	};
 	var name = path.split('/').pop();
 	var ext = name.split('.').pop().toLowerCase();
-	var href = window.location.origin + path;
+	var pathenco = encodeURI(path);
+	var href = window.location.origin + pathenco;
 	var content = `
 <div class="container"><br>
 <div class="card">
