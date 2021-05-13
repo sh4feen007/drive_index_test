@@ -803,6 +803,7 @@ function file_others(path) {
 <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
 </div>
+${UI.disable_video_download ? `` : `
 <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -813,7 +814,7 @@ function file_others(path) {
 	<p class="card-text text-center">
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <a href="${url}" class="btn btn-primary">Download</a>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br></div>`;
+<button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br></div>`}`;
     $('#content').html(content);
     });
 }
@@ -850,6 +851,7 @@ function file_code(path) {
 <pre id="editor" ></pre>
 </div>
 </div>
+${UI.disable_video_download ? `` : `
 <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -861,7 +863,7 @@ function file_code(path) {
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <a href="${url}" class="btn btn-primary">Download</a> <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br></div>
 <script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.8/js/ace/1.4.7/ace.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.8/js/ace/1.4.7/ext-language_tools.js"></script>`;
+<script src="https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.8/js/ace/1.4.7/ext-language_tools.js"></script>`}`;
     $('#content').html(content);
     });
 
@@ -1084,6 +1086,7 @@ function file_pdf(path) {
   </div><br>
   <canvas id="the-canvas" style="max-width: 100%;"></canvas>
   </div>
+${UI.disable_video_download ? `` : `  
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1096,6 +1099,7 @@ function file_pdf(path) {
   <a href="${url}" class="btn btn-primary">Download</a> <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br>
   </div>
   </div>
+`}'
   </div>
   `;
     $('#content').html(content);
@@ -1171,6 +1175,7 @@ function file_image(path) {
   <div>${targetText}</div><br>
   <img src="${url}" width="50%">
   </div>
+${UI.disable_video_download ? `` : `  
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1183,6 +1188,7 @@ function file_image(path) {
   <a href="${url}" class="btn btn-primary">Download</a>
   <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br>
   </div>
+`}
   </div>
   </div>
     `;
