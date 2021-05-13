@@ -992,7 +992,7 @@ function file_audio(path) {
   </div>
   </div>
   </div>
-  ${UI.disable_video_download ? `` : `;
+  `;
     $('#content').html(content);
     });
 }
@@ -1095,7 +1095,7 @@ function file_pdf(path) {
   </div>
   </div>
   </div>
-  ${UI.disable_video_download ? `` : `;
+  `;
     $('#content').html(content);
     });
 }
