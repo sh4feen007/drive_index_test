@@ -915,13 +915,11 @@ function file_video(path) {
 	</video>
   </div>
 	${UI.disable_player ? '<style>.plyr{display:none;}</style>' : ''}
-	${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
   <script>
    const player = new Plyr('#vplayer');
   </script></br>
 ${UI.disable_video_download ? `` : `
 <div class="card-body">
-${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
 <div class="input-group mb-4">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -929,6 +927,7 @@ ${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
 ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
+${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
 <div class="btn-group text-center">
     <a href="${url}" type="button" class="btn btn-primary">Download</a>
     <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1086,7 +1085,6 @@ function file_pdf(path) {
   <canvas id="the-canvas" style="max-width: 100%;"></canvas>
   </div>
   <div class="card-body">
-  ${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
 <div class="input-group mb-4">
   <div class="input-group-prepend">
     <span class="input-group-text" id="">Full URL</span>
@@ -1094,6 +1092,7 @@ function file_pdf(path) {
   <input type="text" class="form-control" id="dlurl" value="${url}">
 </div>
 	<p class="card-text text-center">
+  ${UI.display_download ? '<style>.card-body{display:none;}</style>' : ''}
   ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://drive.google.com/file/d/'+ obj.id +'/view" id ="file_drive_link" target="_blank">GD Link</a>': ''}
   <a href="${url}" class="btn btn-primary">Download</a> <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></p><br>
   </div>
