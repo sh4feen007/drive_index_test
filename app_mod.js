@@ -960,8 +960,6 @@ ${UI.display_drive_link ? '<a type="button" class="btn btn-info" href="https://d
       <span class="sr-only"></span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="potplayer://${url}">PotPlayer</a>
-      <a class="dropdown-item" href="vlc://${url}">VLC</a>
       <a class="dropdown-item" href="intent://${url_without_https}#Intent;type=video/any;package=is.xyz.mpv;scheme=https;end;">mpv-android</a>
       <a class="dropdown-item" href="mpv://${url_base64}">mpv x64</a>
     </div>
